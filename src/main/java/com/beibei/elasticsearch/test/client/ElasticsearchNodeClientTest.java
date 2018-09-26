@@ -1,4 +1,4 @@
-package com.beibei.elasticsearch.test;
+package com.beibei.elasticsearch.test.client;
 
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
@@ -8,7 +8,7 @@ import org.elasticsearch.node.Node;
 import static org.elasticsearch.node.NodeBuilder.*;
 
 /**
- * @author Administrator
+ * @author liang.yin
  * @date 2018/9/25 14:45
  */
 public class ElasticsearchNodeClientTest {

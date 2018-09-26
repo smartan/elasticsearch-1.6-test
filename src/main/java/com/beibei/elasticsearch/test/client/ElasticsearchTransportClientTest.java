@@ -1,4 +1,4 @@
-package com.beibei.elasticsearch.test;
+package com.beibei.elasticsearch.test.client;
 
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
@@ -9,7 +9,7 @@ import org.elasticsearch.common.transport.InetSocketTransportAddress;
 import org.elasticsearch.index.query.QueryBuilders;
 
 /**
- * @author Administrator
+ * @author liang.yin
  * @date 2018/9/25 11:19
  */
 public class ElasticsearchTransportClientTest {
