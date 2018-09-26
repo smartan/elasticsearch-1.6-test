@@ -1,4 +1,4 @@
-package com.beibei.elasticsearch.test.client;
+package com.beibei.elasticsearch.test.search;
 
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
@@ -24,6 +24,14 @@ public class ElasticsearchTransportClientTest {
         // on startup
         Client client = new TransportClient(settings)
                 .addTransportAddress(new InetSocketTransportAddress("127.0.0.1", 9300));
+
+        SearchResponse response = client.prepareSearch("mart_item")
+                .setQuery(QueryBuilders.termQuery("iid", "28589790"))
+                .setFrom(0)
+                .setSize(10)
+                .get();
+
+        System.out.println(response);
 
         // on shutdown
         client.close();

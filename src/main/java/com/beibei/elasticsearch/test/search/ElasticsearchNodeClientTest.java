@@ -1,11 +1,12 @@
-package com.beibei.elasticsearch.test.client;
+package com.beibei.elasticsearch.test.search;
 
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.common.settings.ImmutableSettings;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.node.Node;
-import static org.elasticsearch.node.NodeBuilder.*;
+
+import static org.elasticsearch.node.NodeBuilder.nodeBuilder;
 
 /**
  * @author liang.yin
@@ -21,6 +22,14 @@ public class ElasticsearchNodeClientTest {
                         .client(true)
                         .node();
         Client client = node.client();
+
+        SearchResponse response = client.prepareSearch("mart_item")
+                .setQuery(QueryBuilders.termQuery("iid", "28589790"))
+                .setFrom(0)
+                .setSize(10)
+                .get();
+
+        System.out.println(response);
 
 //        Node node = nodeBuilder().local(true).node(); // node.local
 
