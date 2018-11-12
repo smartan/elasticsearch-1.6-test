@@ -1,9 +1,7 @@
-package com.beibei.elasticsearch.test.client;
+package org.elasticsearch.test.api.client;
 
-import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.common.settings.ImmutableSettings;
-import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.node.Node;
 import static org.elasticsearch.node.NodeBuilder.*;
 

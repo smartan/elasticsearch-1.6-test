@@ -1,12 +1,10 @@
-package com.beibei.elasticsearch.test.client;
+package org.elasticsearch.test.api.client;
 
-import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.ImmutableSettings;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
-import org.elasticsearch.index.query.QueryBuilders;
 
 /**
  * @author liang.yin

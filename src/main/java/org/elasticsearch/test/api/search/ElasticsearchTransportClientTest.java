@@ -1,4 +1,4 @@
-package com.beibei.elasticsearch.test.search;
+package org.elasticsearch.test.api.search;
 
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
